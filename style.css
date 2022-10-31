@@ -1,31 +1,125 @@
-* {    
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     font-family: sans-serif;
-    min-height: 100vh;
-    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;  
+    min-width: 100%;  
+}
+
+ul li {
+    list-style: none;
+}
+li a {
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.nav-container {
+    width: 90%;
+    min-height: 9vh;
+    margin: 0 auto;    
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.burger div {
+    width: 1.5rem;
+    height: 3px;
+    background-color: rgba(0,0,0,.8);
+    margin: 5px;
+    transition: 0.4s;
+}
+
+.right-nav a:hover {
+    border-bottom: 1px solid rgba(0,0,0,.8);    
+    color: rgba(0,0,0,.8);
+}
+
+.right-nav-items {
+    display: flex;
+    gap: 1rem;
+    transform: translateX(100%);
+    display: none;
 }
 
 .scroll-dude-container {
     position: absolute;
     right: 0;
     top: 45%;
-    transform: translateY(-45%);    
+    transform: translateY(-45%);
 }
-.message {    
-    color: red;  
-    transform: translate(100%, 100%); 
+
+.message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    transform: translate(100%, 150%);
+    transition: .3s cubic-bezier(0.61, 1, 0.88, 1);
 }
+
 #scroll-dude {
+    width: 30px;
     position: absolute;
     right: 0;
-    width: 30px;
-}
-.scroll-dude-container:hover .message{
+    transform: translateX(30%);
     transition: .3s cubic-bezier(0.61, 1, 0.88, 1);
-    transform: rotate(-30deg) translate(-10%, -25%); 
+    cursor: pointer;
+}
+
+.burger {
+    cursor: pointer;
+}
+
+.burger:hover div{    
+    background-color: rgba(0,0,0,.7) !important;
+}
+
+.right-nav-items-show {    
+    display: flex;
+    transform: translateX(0%);
+}
+
+.main-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#dude-img {
+    margin-top: 5rem;
+    cursor: pointer;
+}
+
+.transition-box1 {
+    transform: translate(0, 8px) rotate(-45deg);
+}
+.transition-box2 {
+    opacity: 0;
+}
+.transition-box3 {
+    transform: translate(0, -8px) rotate(45deg);
+}
+
+.transition-message {
+    transform: rotate(-30deg) translateX(-10%);
+}
+.transition-scroll-dude {
+    transform: translateX(0%)!important;
 }

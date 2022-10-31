@@ -5,21 +5,35 @@
     <meta name="author" content="ybo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="svg/scroll-dude.svg">
+    <link rel="icon" type="image/x-icon" href="img/scroll-dude.svg">
     <link rel="stylesheet" href="./style.css">
     <title>Web Dude</title>
 </head>
 <body>
     <div class="nav-container">
-        
+        <div class="right-nav">
+            <ul class="right-nav-items">
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+            <div class="burger">
+                <div class="box1"></div>
+                <div class="box2"></div>
+                <div class="box3"></div>
+            </div>
+        </div>
     </div>
 
+    <div class="main-content">
+        <img src="img/dude-portrait.svg" alt="dude" id="dude-img">
+    </div>
 
     <div class="scroll-dude-container">
-        <div class="message v-center">
+        <div class="message">
             <span>Noooo!</span>
         </div>    
-        <img src="svg/scroll-dude.svg" alt="scroll dude" id="scroll-dude" class="v-center">
+        <img src="img/scroll-dude.svg" alt="scroll dude" id="scroll-dude">
     </div>
+
+    <script src="./app.js"></script>
 </body>
 </html>
