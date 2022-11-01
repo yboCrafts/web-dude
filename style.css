@@ -56,7 +56,9 @@ li a {
     display: flex;
     gap: 1rem;
     transform: translateX(100%);
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s cubic-bezier(0.61, 1, 0.88, 1);
 }
 
 .scroll-dude-container {
@@ -92,12 +94,14 @@ li a {
 }
 
 .right-nav-items-show {    
-    display: flex;
+    visibility: visible;
+    opacity: 100;
     transform: translateX(0%);
 }
 
 .main-content {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
 }
