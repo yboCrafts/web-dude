@@ -106,9 +106,31 @@ li a {
     justify-content: center;
 }
 
+.head-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 #dude-img {
     margin-top: 5rem;
     cursor: pointer;
+}
+
+#dev-img {
+    width: 15rem;
+    height: 15rem;    
+    visibility: hidden;
+    position: absolute;  
+    pointer-events: none;
+}
+
+/* #dev-img:hover {
+    transform: scale(1.5);
+} */
+
+.dev-img-transition {
+    visibility: visible !important;  
 }
 
 .transition-box1 {

@@ -4,6 +4,7 @@ app = {
         this.message = document.querySelector('.message');
         this.burger = document.querySelector('.burger');
         this.dude = document.querySelector('#dude-img');
+        this.profile = document.querySelector('#dev-img');
 
         this.burger.addEventListener('click', () => {
             const box = document.querySelectorAll('.burger div');
@@ -26,11 +27,14 @@ app = {
             list.classList.toggle('right-nav-items-show');
         });
 
-        this.dude.addEventListener('mouseover', (ev) => {            
-            ev.target.src = 'img/dude-wave.svg'
+        this.dude.addEventListener('mouseover', (ev) => {                    
+            ev.target.src = 'img/dude-wave.svg';
+            this.profile.classList.toggle('dev-img-transition');
+
         });
         this.dude.addEventListener('mouseout', (ev) => {            
             ev.target.src = 'img/dude-portrait.svg'
+            this.profile.classList.toggle('dev-img-transition');
         });
 
         this.scroll_dude.addEventListener('click', () => {
